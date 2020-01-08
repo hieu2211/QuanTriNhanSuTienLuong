@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    color: #000;
+    font-family: sans-serif;
+    line-height: 1.4;
+    background-color: #f5f6fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #dfe6e9;
+    /* padding: 10px 0; */
+    text-align: center;
+}
+.logo h4{
+    margin: 7px 0;
+}
+.menu .btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #34495e;
+    /* font-weight: 600; */
+    padding: 5px 0;
+}
+
+.main-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 20px;
+    width: 90%;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+}
+
+table {
+    margin-top: 15px;
+}
+
+.title-content {
+    text-align: center;
+    margin-top: 35px;
+    font-weight: 600;
+    color: #0097e6;
+}
+
+select {
+    word-wrap: normal;
+    width: 197px;
+    height: 28px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="search"] {
+    height: 30px;
+}
+
+.user {
+    font-size: 20px;
+}
+
+.btn-group {
+    margin-top: 5px;
+}
+.login{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 3px;
+}
+.title-login{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
