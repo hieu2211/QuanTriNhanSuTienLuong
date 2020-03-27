@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quản Lý Công Ty</title>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css"
+	href="/bootstrap-4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+<script src="/jquery/jquery-3.4.1.min.js"></script>
+<script src="/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<header id="header" style="background: #333">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" >
+					<h1 class="text-center" style="color: #ddd">
+						Team 5 <small style="font-size: 22	px; color: #777">Account Login</small>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="main" style="margin-top: 150px;">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-4 col-md-offset-4"></div>
+				<div class="col-md-4 col-md-offset-4">
+					<div class="card bg-light">
+						<div class="card-body shadow ">
+							<form id="login" class="well justify-center">
+								<div class="form-group">
+									<label>Tên Đăng Nhập</label> <input type="text"
+										class="form-control" placeholder="Nhập Tên Đăng Nhập" />
+								</div>
+								<div class="form-group">
+									<label>Mật Khẩu</label> <input type="password"
+										class="form-control" placeholder="Mật Khẩu" />
+								</div>
+								<div class="form-group">
+									<a type="submit" class="btn btn-primary form-control"
+										th:href="@{trangchu}">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-4"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

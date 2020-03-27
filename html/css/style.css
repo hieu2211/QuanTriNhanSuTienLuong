@@ -1,97 +1,140 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-size: 16px;
-    color: #000;
-    font-family: sans-serif;
-    line-height: 1.4;
-    background-color: #f5f6fa;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: #ebebe6;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
-
-a {
-    text-decoration: none;
+.khung{
 }
-
-header {
-    background-color: #dfe6e9;
-    /* padding: 10px 0; */
-    text-align: center;
+.khung .menu{
+    width:100%;
+    height: 56px;
 }
-.logo h4{
-    margin: 7px 0;
+.khung .menu .btn.btn-primary{
+    color:#fff; 
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+    cursor: pointer;
 }
-.menu .btn {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: #34495e;
-    /* font-weight: 600; */
-    padding: 5px 0;
+.khung .menu .btn.btn-primary:hover{
+    color:#fff; 
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 2px 2px 2px 2px rgba(156, 39, 176, 0.14), 2px 3px 1px -2px rgba(156, 39, 176, 0.2), 2px 1px 5px 2px rgba(156, 39, 176, 0.12);
 }
-
-.main-wrap {
+.khung .right{
+    position: relative;
+}
+.khung .right .ListNhanvien{
+    padding-top: 30px;
+}
+.khung .right .ListNhanvien .formsuport .row{
+    padding-top: 0;
+}
+.khung .right .ListNhanvien .formsuport .row .btn{
+    padding: 5px 10px;
+}
+.khung .right .ListNhanvien .formsuport .row .btn.btn-primary{
+    color:#fff; 
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+    cursor: pointer;
+}
+.khung .right .ListNhanvien .formsuport .row .btn.btn-primary:hover{
+    color:#fff; 
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 2px 2px 2px 2px rgba(156, 39, 176, 0.14), 2px 3px 1px -2px rgba(156, 39, 176, 0.2), 2px 1px 5px 2px rgba(156, 39, 176, 0.12);
+}
+.khung .right .ListNhanvien .khunglist{
+    margin-top: 50px;
+}
+.khung .right .ListNhanvien .khunglist  .card{
+    padding-top:50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.khung .right .ListNhanvien .khunglist  .card{
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+.khung .right .ListNhanvien .khunglist .card .card-header{
+    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+    color: #fff;
+    width:986px;
+    height: 52px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-    padding: 20px;
-    width: 90%;
+    top: -25px;
+    left: 5%;
 }
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-}
-
-table {
-    margin-top: 15px;
-}
-
-.title-content {
-    text-align: center;
-    margin-top: 35px;
-    font-weight: 600;
-    color: #0097e6;
-}
-
-select {
-    word-wrap: normal;
-    width: 197px;
-    height: 28px;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-}
-
-input[type="search"] {
-    height: 30px;
-}
-
-.user {
+.khung .right .ListNhanvien .khunglist .card .card-header h3{
     font-size: 20px;
 }
-
-.btn-group {
-    margin-top: 5px;
+.khung .right .ListNhanvien .khunglist .card .card-body button.btn-primary{
+    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+    color: #fff;
+    border-color: #9c27b0;
+    cursor: pointer;
 }
-.login{
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid black;
-    padding: 30px;
-    border-radius: 3px;
+.khung .right .ListNhanvien .khunglist .card .card-body button.btn-primary:hover{
+    color:#fff; 
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 2px 2px 2px 2px rgba(156, 39, 176, 0.14), 2px 3px 1px -2px rgba(156, 39, 176, 0.2), 2px 1px 5px 2px rgba(156, 39, 176, 0.12);
 }
-.title-login{
+.khung .right .ListNhanvien .khunglist .card table tr th{
+    color: #9c27b0;
+    font-weight: normal;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px;
 }
+.khung .right .ListNhanvien .khunglist .card table tr td{
+    font-weight: normal;
+    text-align: center;
+}
+.khung .left{
+    background-color: #fcfdff;
+}
+.khung .left .menu{
+    height: 910px;
+    background-color: #fcfdff;
+}
+.khung .left .menu ul li a.active {
+    color: #fff;
+    background-color: #9c27b0;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4)
+}
+.khung .left .menu ul li a{
+    width:165px;
+    margin: 25px 15px 0;
+    border-radius: 3px;
+    color: #3C4858;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    transition: all 1.2s ease ;
+}
+.khung .left .menu ul li a:hover{
+    transform: scale(1.1, 1.1);
+}
+.khung .left .menu ul li a p{
+    margin: 0;
+}
+
+header{
+    background: #333333;
+}
+
+
+
+
+

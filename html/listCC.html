@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Quản Lý Công Ty</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	href="/bootstrap-4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+<script src="/jquery/jquery-3.4.1.min.js"></script>
+<script src="/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="khung">
+		<div class="container-fluid">
+			<div class="menu">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+					<a class="navbar-brand text-center mr-auto">QUẢN LÝ CÔNG TY</a>
+					<a class="btn btn-primary" th:href="@{login}">Logout</a>
+				</nav>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 left">
+					<div class="menu">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+							<li class="nav-item"><a class="nav-link " th:href="@{trangchu}"><p>Trang Chủ</p></a></li>
+							<li class="nav-item"><a class="nav-link " th:href="@{nhanvien}"><p>Nhân Viên</p></a></li>
+							<li class="nav-item"><a class="nav-link " th:href="@{listphongban}"><p>Phòng Ban</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listtrinhdo}"><p>Trình Độ</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listduan}"><p>Dự Án</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listbophan}"><p>Bộ Phận</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listbangluong}"><p>Bảng Lương</p></a></li>
+							<li class="nav-item"><a class="nav-link active" th:href="@{listchamcong}"><p>Chấm Công</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listchucvu}"><p>Chức Vụ</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listhopdong}"><p>Hợp Đồng</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listtinhluong}"><p>Tính Lương</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listquyenhan}"><p>Quyền Hạng </p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listnguoidung}"><p>Người Dùng</p></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-10 right">
+					<div class="tab-content" id="v-pills-tabContent">
+						<!--  List Phòng Ban  -->
+						<div class="ListNhanvien tab-pane fade show active"
+							id="v-pills-phongban" role="tabpanel"
+							aria-labelledby="v-pills-phongban-tab">
+							<!-- 	form suport -->
+							<div class="formsuport">
+								<div class="row">
+									<div class="col-4 ">
+										<a class="btn btn-primary addnhanvien"
+											th:href="@{/quanly/themchamcong}"> Thêm Chấm Công </a>
+									</div>
+									<div class="col-8">
+										<div class="form-row">
+											<form class="form-inline col-md-6" action="#"
+												th:action="@{/quanly/sortCC}" th:object="${ChamCong}">
+												<div class="form-group mx-sm-3 mb-2">
+													<input type="search" th:field="*{SoNgayCong}" class="form-control"
+														placeholder="vd: 24"> </input>
+												</div>
+												<button type="submit" class="btn btn-primary  mb-2 search">Xắp
+													xếp</button>
+											</form>
+											<form class="form-inline col-md-6" action="#"
+												th:action="@{/quanly/searchCC}"
+												th:object="${ChamCong}">
+												<div class="form-group mx-sm-3 mb-2">
+													<input type="search" th:field="*{NhanVien.Ten}" class="form-control"
+														placeholder="Search"> </input>
+												</div>
+												<button type="submit" class="btn btn-primary  mb-2 search">Search</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End form suport -->
+
+							<div class="khunglist">
+								<div class="card">
+									<div class="card-header card-header-primary">
+										<h3 class="card-title ">Danh sach Chấm Công</h3>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-light">
+													<tr>
+														<th>Mã Chấm Công</th>
+														<th>Nhân Viên</th>
+														<th>Số Ngày Công</th>
+														<th>Update</th>
+														<th>Delete</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr th:each="item:${listChamCong}">
+														<td th:text="${item.MaCC}"></td>
+														<td th:text="${item.NhanVien.Ten}"></td>
+														<td th:text="${item.SoNgayCong}"></td>
+														<td><a
+															th:href="@{/quanly/suaCC/{MaCC}(MaCC=${item.MaCC})}">Update</a></td>
+														<td><a
+															th:href="@{/quanly/xoaCC/{MaCC}(MaCC=${item.MaCC})}">Delete</a></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				<!-- End List Phòng Ban  -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

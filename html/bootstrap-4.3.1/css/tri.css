@@ -1,0 +1,32 @@
+.menu {
+	width: 100%;
+	height: 50px;
+	background: #007bff;
+}
+
+.menu h3 {
+	text-align: center;
+	padding-top: 5px;
+	font-size: 30px;
+}
+
+.menu h3 a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu h3 a:hover {
+	text-decoration: none;
+	color: orange;
+}
+
+.pri {
+	width: 100%;
+	height: 25px;
+}
+
+.hello {
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+}
