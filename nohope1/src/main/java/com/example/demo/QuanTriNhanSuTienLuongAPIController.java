@@ -14,7 +14,7 @@ public class QuanTriNhanSuTienLuongAPIController {
 	@Autowired
 	daoChucVu chucvu;
 	@Autowired
-	daoHopDong hopdong;
+	daoHopDong hopdong;	
 	@Autowired
 	daoNguoiDung nguoidung;
 	@Autowired

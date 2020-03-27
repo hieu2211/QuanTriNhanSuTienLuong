@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Quản Lý Công Ty</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	href="/bootstrap-4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+<script src="/jquery/jquery-3.4.1.min.js"></script>
+<script src="/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="khung">
+		<div class="container-fluid">
+			<div class="menu">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+					<a class="navbar-brand text-center mr-auto">QUẢN LÝ CÔNG TY</a>
+					<a class="btn btn-primary" th:href="@{login}">Logout</a>
+				</nav>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 left">
+					<div class="menu">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+							<li class="nav-item"><a class="nav-link " th:href="@{trangchu}"><p>Trang Chủ</p></a></li>
+							<li class="nav-item"><a class="nav-link active" th:href="@{nhanvien}"><p>Nhân Viên</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listphongban}"><p>Phòng Ban</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listtrinhdo}"><p>Trình Độ</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listduan}"><p>Dự Án</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listbophan}"><p>Bộ Phận</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listbangluong}"><p>Bảng Lương</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listchamcong}"><p>Chấm Công</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listchucvu}"><p>Chức Vụ</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listhopdong}"><p>Hợp Đồng</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listtinhluong}"><p>Tính Lương</p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listquyenhan}"><p>Quyền Hạng </p></a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{listnguoidung}"><p>Người Dùng</p></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-10 right">
+					<div class="tab-content" id="v-pills-tabContent">
+						<!-- Thêm Nhân Viên -->
+						<div class="ListNhanvien tab-pane fade show active"
+							id="v-pills-profile" role="tabpanel"
+							aria-labelledby="v-pills-profile-tab">
+							<div class="formsuport">
+								<div class="row">
+									<div class="col-8">
+										<a class="btn btn-primary addnhanvien "
+											th:href="@{/quanly/nhanvien}"> Thoát </a>
+									</div>
+									<div class="col-4">
+										<form class="form-inline">
+											<div class="form-group mx-sm-3 mb-2">
+												
+											</div>
+											<button type="submit" class="btn btn-primary  mb-2 search">Search</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="khunglist tab-pane fade shown active"
+									id="pills-profile" role="tabpanel"
+									aria-labelledby="pills-profile-tab">
+									<div class="card">
+										<div class="card-header card-header-primary">
+											<h3 class="card-title ">Sửa Nhân Viên</h3>
+										</div>
+										<div class="card-body">
+											<form action="#" th:action="@{/quanly/nhanvienup}"
+												th:object="${NhanVienUP}">
+												<div class="form-row">
+													<div class="form-group col-sm-2">
+														<label for="ho">Mã Nhân Viên</label> <input type="text"
+															class="form-control" id="ho" placeholder="Mã Nhân Viên"
+															th:field="*{MaNV}"></input>
+													</div>
+													<div class="form-group col-sm-5">
+														<label for="ho">Họ</label> <input type="text"
+															class="form-control" id="ho" placeholder="Họ"
+															th:field="*{Ho}"></input>
+													</div>
+
+													<div class="form-group col-sm-5">
+														<label for="ten">Tên</label> <input type="text"
+															class="form-control" id="ten" placeholder="Tên"
+															th:field="*{Ten}"> </input>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label for="diachi">Địa Chỉ</label> <input type="text"
+														class="form-control" id="diachi"
+														placeholder="1234 Main St" th:field="*{DiaChi}"></input>
+												</div>
+												<div class="form-row">
+													<div class="form-group col-md-6">
+														<label for="SoDT">Số Điện Thoại</label> <input type="text"
+															th:field="*{SoDT}" class="
+																form-control"
+															id="SDT" placeholder="023XXXXX"></input>
+													</div>
+													<div class="form-group col-md-6">
+														<label for="GioiTinh">Giới Tính</label> <input type="text"
+															th:field="*{GioiTinh}"
+															class="
+																form-control" id="GioiTinh"
+															placeholder="Nam/Nữ"></input>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group col-md-6">
+														<label for="TTHN">Tình Trạng Hôn Nhân</label> <input
+															type="text" th:field="*{TinhTrangHonNhan}"
+															class="
+																form-control" id="TTHN"
+															placeholder="Kết hôn/Độc Thân"></input>
+													</div>
+													<div class="form-group col-md-6">
+														<label for="CMND">Chứng Minh Nhân Dân</label> <input
+															type="text" th:field="*{CMND}"
+															class="
+																form-control" id="CMND"
+															placeholder="9525XXXXX"></input>
+													</div>
+
+
+												</div>
+
+												<div class="form-row">
+													<div class="form-group col-md-6">
+														<label for="NguyenQuan">Nguyên Quán</label> <input
+															type="text" th:field="*{NguyenQuan}"
+															class="
+																form-control" id="NguyenQuan"
+															placeholder="1234 Main St"></input>
+													</div>
+													<div class="form-group col-md-6">
+														<label for="ThuongTru">Thường Trú</label> <input
+															type="text" th:field="*{ThuongTru}"
+															class="
+																form-control" id="ThuongTru"
+															placeholder="1234 Main St"></input>
+													</div>
+												</div>
+
+												<div class="form-row">
+													<div class="form-group col-md-4">
+														<label for="inputState">Chức Vụ</label> <select
+															id="inputState" class="form-control" th:field="*{ChucVu}">
+															<option th:each="item:${listChucVu}"
+																th:value="${item.MaCV}" th:text="${item.TenCV}"></option>
+														</select>
+													</div>
+
+													<div class="form-group col-md-4">
+														<label for="inputState">Trình Độ</label> <select
+															id="inputState" class="form-control"
+															th:field="*{TrinhDo}">
+															<option th:each="item:${listTrinhDo}"
+																th:value="${item.MaTD}" th:text="${item.TenTD}"></option>
+														</select>
+													</div>
+
+													<div class="form-group col-md-4">
+														<label for="inputState">Phòng Ban</label> <select
+															id="inputState" class="form-control"
+															th:field="*{PhongBan}">
+															<option th:each="item:${listPhongBan}"
+																th:value="${item.MaPB}" th:text="${item.TenPB}"></option>
+														</select>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group col-md-4"></div>
+													<div class="form-group col-md-4">
+														<label for="duan">Dự Án</label> <select id="inputState"
+															class="form-control" th:field="*{DuAn}">
+															<option th:each="item:${listDuAn}"
+																th:value="${item.MaDA}" th:text="${item.TenDA}"></option>
+														</select>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-primary">Sửa
+													Nhân Viên</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Thêm NHân Viên -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
