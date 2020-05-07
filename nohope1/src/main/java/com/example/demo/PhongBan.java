@@ -45,9 +45,7 @@ public class PhongBan {
 		this.boPhan = boPhan;
 	}
 	@OneToMany(mappedBy = "phongBan", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	public Set<NhanVien> getNhanVien() {
-		return nhanVien;
-	}
+	
 	public void setNhanVien(Set<NhanVien> nhanVien) {
 		this.nhanVien = nhanVien;
 	}

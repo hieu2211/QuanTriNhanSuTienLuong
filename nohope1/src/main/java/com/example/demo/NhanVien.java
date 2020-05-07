@@ -130,37 +130,27 @@ public class NhanVien {
 		this.phongBan = phongBan;
 	}
 	@OneToMany(mappedBy = "nhanVien",cascade = CascadeType.ALL)
-	public Set<BangLuong> getBangLuong() {
-		return bangLuong;
-	}
+	
 	public void setBangLuong(Set<BangLuong> bangLuong) {
 		this.bangLuong = bangLuong;
 	}
 	@OneToMany(mappedBy = "nhanVien",cascade = CascadeType.ALL)
-	public Set<ChamCong> getChamCong() {
-		return chamCong;
-	}
+	
 	public void setChamCong(Set<ChamCong> chamCong) {
 		this.chamCong = chamCong;
 	}
 	@OneToMany(mappedBy = "nhanVien",cascade = CascadeType.ALL)
-	public Set<TinhLuong> getTinhLuong() {
-		return tinhLuong;
-	}
+	
 	public void setTinhLuong(Set<TinhLuong> tinhLuong) {
 		this.tinhLuong = tinhLuong;
 	}
 	@OneToMany(mappedBy = "nhanVien",cascade = CascadeType.ALL)
-	public Set<HopDong> getHopDong() {
-		return hopDong;
-	}
+	
 	public void setHopDong(Set<HopDong> hopDong) {
 		this.hopDong = hopDong;
 	}
 	@OneToMany(mappedBy = "nhanVien",cascade = CascadeType.ALL)
-	public Set<NguoiDung> getNguoiDung() {
-		return nguoiDung;
-	}
+	
 	public void setNguoiDung(Set<NguoiDung> nguoiDung) {
 		this.nguoiDung = nguoiDung;
 	}

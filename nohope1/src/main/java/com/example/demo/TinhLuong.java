@@ -75,9 +75,7 @@ public class TinhLuong {
 		this.nhanVien = nhanVien;
 	}
 	@OneToMany(mappedBy = "tinhLuong",cascade = CascadeType.ALL)
-	public Set<BangLuong> getBangLuong() {
-		return bangLuong;
-	}
+	
 	public void setBangLuong(Set<BangLuong> bangLuong) {
 		this.bangLuong = bangLuong;
 	}

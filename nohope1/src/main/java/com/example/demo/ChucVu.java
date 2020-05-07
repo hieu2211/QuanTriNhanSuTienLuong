@@ -36,10 +36,7 @@ public class ChucVu {
 		TenCV = tenCV;
 	}
 	
-	@OneToMany(mappedBy = "chucVu",cascade = CascadeType.ALL)
-	public Set<NhanVien> getNhanVien() {
-		return nhanVien;
-	}
+	@OneToMany(mappedBy = "chucVu",cascade = CascadeType.ALL) 
 	public void setNhanVien(Set<NhanVien> nhanVien) {
 		this.nhanVien = nhanVien;
 	}

@@ -25,9 +25,7 @@ public class TrinhDo {
 		TenTD = tenTD;
 	}
 	@OneToMany(mappedBy = "trinhDo",cascade = CascadeType.ALL)
-	public Set<NhanVien> getNhanVien() {
-		return nhanVien;
-	}
+	
 	public void setNhanVien(Set<NhanVien> nhanVien) {
 		this.nhanVien = nhanVien;
 	}

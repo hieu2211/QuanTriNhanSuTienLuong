@@ -1,63 +1,88 @@
 <!DOCTYPE HTML>
 
 <html>
+
 <head>
-<title>Quản Lý Công Ty</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Quản Lý Công Ty</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
+
 <body>
 	<div class="khung">
 		<div class="container-fluid">
 			<div class="menu">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 					<a class="navbar-brand text-center mr-auto">QUẢN LÝ CÔNG TY</a>
-					<a class="btn btn-primary" th:href="@{login}">Logout</a>
+					<a class="btn btn-primary" href="@{login}">Logout</a>
 				</nav>
 			</div>
 			<div class="row">
 				<div class="col-sm-2 left">
 					<div class="menu">
 						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-							<li class="nav-item"><a class="nav-link " th:href="@{trangchu}"><p>Trang Chủ</p></a></li>
-							<li class="nav-item"><a class="nav-link active" th:href="@{nhanvien}"><p>Nhân Viên</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listphongban}"><p>Phòng Ban</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listtrinhdo}"><p>Trình Độ</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listduan}"><p>Dự Án</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listbophan}"><p>Bộ Phận</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listbangluong}"><p>Bảng Lương</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listchamcong}"><p>Chấm Công</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listchucvu}"><p>Chức Vụ</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listhopdong}"><p>Hợp Đồng</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listtinhluong}"><p>Tính Lương</p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listquyenhan}"><p>Quyền Hạng </p></a></li>
-							<li class="nav-item"><a class="nav-link" th:href="@{listnguoidung}"><p>Người Dùng</p></a></li>
+							<li class="nav-item"><a class="nav-link " href="trangchu.html">
+									<p>Trang Chủ</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link active" href="listNV.html">
+									<p>Nhân Viên</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listPB.html">
+									<p>Phòng Ban</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listTD.html">
+									<p>Trình Độ</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listDA.html">
+									<p>Dự Án</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listBP.html">
+									<p>Bộ Phận</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listBL.html">
+									<p>Bảng Lương</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listCC.html">
+									<p>Chấm Công</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listCV.html">
+									<p>Chức Vụ</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listHD.html">
+									<p>Hợp Đồng</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listTL.html">
+									<p>Tính Lương</p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listQH.html">
+									<p>Quyền Hạng </p>
+								</a></li>
+							<li class="nav-item"><a class="nav-link" href="listND.html">
+									<p>Người Dùng</p>
+								</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-sm-10 right">
 					<div class="tab-content" id="v-pills-tabContent">
-				 <!--  List nHÂN VIÊNN   -->
-						<div class="ListNhanvien tab-pane fade show active"
-							id="v-pills-profile" role="tabpanel"
+						<!--  List nHÂN VIÊNN   -->
+						<div class="ListNhanvien tab-pane fade show active" id="v-pills-profile" role="tabpanel"
 							aria-labelledby="v-pills-profile-tab">
 							<!-- 	form suport -->
 							<div class="formsuport">
 								<div class="row">
 									<div class="col-4 ">
-										<a class="btn btn-primary addnhanvien"
-											th:href="@{/quanly/themnhanvien}"> Thêm Nhân Viên </a>
+										<a class="btn btn-primary addnhanvien" href="@{/quanly/themnhanvien}"> Thêm
+											Nhân Viên </a>
 									</div>
 									<div class="col-8">
 										<div class="form-row">
-											<form class="form-inline col-md-6" action="#"
-												th:action="@{/quanly/sortnv}" th:object="${NhanVien}">
+											<form class="form-inline col-md-6" action="#" th:action="@{/quanly/sortnv}"
+												th:object="${NhanVien}">
 												<div class="form-group mx-sm-3 mb-2">
 													<input type="search" th:field="*{Ten}" class="form-control"
 														placeholder="vd: Tên"> </input>
@@ -66,13 +91,13 @@
 													xếp</button>
 											</form>
 											<form class="form-inline col-md-6" action="#"
-												th:action="@{/quanly/searchNhanVien}"
-												th:object="${NhanVien}">
+												th:action="@{/quanly/searchNhanVien}" th:object="${NhanVien}">
 												<div class="form-group mx-sm-3 mb-2">
 													<input type="search" th:field="*{Ten}" class="form-control"
 														placeholder="Search"> </input>
 												</div>
-												<button type="submit" class="btn btn-primary  mb-2 search">Search</button>
+												<button type="submit"
+													class="btn btn-primary  mb-2 search">Search</button>
 											</form>
 										</div>
 									</div>
@@ -94,7 +119,6 @@
 														<th>Chức Vụ</th>
 														<th>Trình Độ</th>
 														<th>Phòng Ban</th>
-														<!-- <th>Dự Án</th> -->
 														<th>Họ</th>
 														<th>Tên</th>
 														<th>Địa Chỉ</th>
@@ -125,9 +149,9 @@
 														<td th:text="${item.NguyenQuan}"></td>
 														<td th:text="${item.ThuongTru}"></td>
 														<td><a
-															th:href="@{/quanly/suanv/{MaNV}(MaNV=${item.MaNV})}">Update</a></td>
+															href="@{/quanly/suanv/{MaNV}(MaNV=${item.MaNV})}">Update</a></td>
 														<td><a
-															th:href="@{/quanly/xoa/{MaNV}(MaNV=${item.MaNV})}">Delete</a></td>
+															href="@{/quanly/xoa/{MaNV}(MaNV=${item.MaNV})}">Delete</a></td>
 													</tr> -->
 												</tbody>
 											</table>
@@ -136,54 +160,54 @@
 								</div>
 							</div>
 						</div>
-				<!-- End ListNhanVien -->
+						<!-- End ListNhanVien -->
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
-	<script src="jquery/jquery-3.4.1.min.js"></script>
-<script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
-<script>
-        var request = new XMLHttpRequest()
-        let load = ''
-        var show_ListNV = document.getElementById("show_ListNV");
-        request.open('GET', 'http://localhost:8080/quantri/getAllDataNhanVien', true)
-        request.onload = function () {
-            var data = JSON.parse(this.response)
-            console.log(data);
-            let load = ''
-            if (request.status >= 200 && request.status < 400) {
-                data.forEach(check => {
-                	 load += `<tr>
+		<script src="jquery/jquery-3.4.1.min.js"></script>
+		<script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
+	<script>
+		var request = new XMLHttpRequest();
+		let load = '';
+		var show_ListNV = document.getElementById("show_ListNV");
+		request.open('GET', 'http://localhost:8080/quantri/getAllDataNhanVien', true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+			console.log(data);
+			let load = '';
+			if (request.status >= 200 && request.status < 400) {
+				data.forEach(check => {
+					load += `<tr>
                 		 <td> ${check.MaNV}</td>
-                         <td> ${check.chucVu}</td>
-                         <tdtd> ${check.trinhDo}</td>
-                         <td> ${check.phongBan}</td>
+                         <td> ${check.chucVu.TenCV}</td>
+                         <td> ${check.trinhDo.TenTD}</td>
+                         <td> ${check.phongBan.TenPB}</td>
                          <td> ${check.Ho}</td>
                          <td> ${check.Ten}</td>
                          <td> ${check.DiaChi}</td>
                          <td> ${check.SoDT}</td>
+						 <td> ${check.gioiTinh}</td>
                          <td> ${check.TinhTrangHonNhan}</td>
                          <td> ${check.CMND}</td>
                          <td> ${check.NguyenQuan}</td>
                          <td> ${check.ThuongTru}</td>
-                         <td> ${check.ngaySinh}</td>
-                         <td> ${check.ngaySinh}</td>
-                         <td><a	th:href="@{/quanly/suanv/{MaNV}(MaNV=${item.MaNV})}">Update</a></td>
+                         <td><a	href="@{/quanly/suanv/{MaNV}(MaNV=${check.MaNV})}">Update</a></td>
 														<td><a
-														th:href="@{/quanly/xoa/{MaNV}(MaNV=${item.MaNV})}">Delete</a></td>
+														href="@{/quanly/xoa/{MaNV}(MaNV=${check.MaNV})}">Delete</a></td>
                          </tr>`
-                })
-            } else {
-                console.log('error')
-            }
-            show_ListNV.innerHTML = load;
-        }
-        request.send()
-    </script>
-	
+				})
+			} else {
+				console.log('error')
+			}
+			show_ListNV.innerHTML = load;
+		}
+		request.send();
+	</script>
+
 
 </body>
+
 </html>

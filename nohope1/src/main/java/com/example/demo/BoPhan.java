@@ -33,9 +33,7 @@ public class BoPhan {
 		TenBP = tenBP;
 	}
 	@OneToMany(mappedBy = "boPhan",cascade = CascadeType.ALL)
-	public Set<PhongBan> getPhongBan() {
-		return phongBan;
-	}
+	
 	public void setPhongBan(Set<PhongBan> phongBan) {
 		this.phongBan = phongBan;
 	}
